@@ -14,7 +14,7 @@
     "@astrojs/sitemap": "^3.1.1",
     "@astrojs/svelte": "^5.2.0",
     "@astrojs/tailwind": "^5.1.0",
-    "@astrojs/vercel": "^7.3.6",
+    "@astrojs/vercel": "^7.5.0",
     "@swup/a11y-plugin": "^4.5.0",
     "@swup/preload-plugin": "^3.2.10",
     "@swup/progress-plugin": "^3.1.2",
