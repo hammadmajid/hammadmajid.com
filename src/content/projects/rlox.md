@@ -5,5 +5,5 @@ tags:
 - Rust
 - Compiler
 source: https://github.com/hammadmajid/rlox
-status: in-progress
+status: In progress
 ---

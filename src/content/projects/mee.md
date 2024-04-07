@@ -5,5 +5,5 @@ tags:
 - C++
 - Math
 source: https://github.com/hammadmajid/mee
-status: in-progress
+status: In progress
 ---

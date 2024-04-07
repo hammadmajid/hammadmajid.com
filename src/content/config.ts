@@ -8,7 +8,7 @@ const projectCollection = defineCollection({
     tags: z.array(z.string()),
     source: z.string(),
     website: z.string().optional(),
-    status: z.enum(['in-progress', 'completed']),
+    status: z.enum(['In progress', 'Completed']),
   }),
 });
 
