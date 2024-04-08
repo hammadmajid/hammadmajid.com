@@ -25,7 +25,7 @@ const { title, description } = Astro.props as Props;
 <header>
   <Nav />
 </header>
-<div id="swup" class="grow transition-fade">
+  <div class="grow">
   <slot />
 </div>
 <Footer />
@@ -33,33 +33,6 @@ const { title, description } = Astro.props as Props;
 </html>
 
 <SpeedInsights />
-
-<script>
-  import Swup from 'swup';
-  import SwupA11yPlugin from '@swup/a11y-plugin';
-  import SwupPreloadPlugin from '@swup/preload-plugin';
-  import SwupProgressPlugin from '@swup/progress-plugin';
-
-  // @ts-ignore
-  const swup: Swup = new Swup({
-    plugins: [
-      // WebStorm panics when using SwupProgressPlugin, but it works fine, suppressed the error
-      new SwupProgressPlugin({
-        delay: 0,
-      }),
-      new SwupA11yPlugin(),
-      new SwupPreloadPlugin(),
-    ],
-  });
-
-  // noinspection TypeScriptUnresolvedReference
-  swup.on('contentReplaced', () => {
-    document.documentElement.classList.add('is-animating');
-    setTimeout(() => {
-      document.documentElement.classList.remove('is-animating');
-    }, 500);
-  });
-</script>
 
 <style>
     .transition-fade {
