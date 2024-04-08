@@ -1,5 +1,5 @@
 ---
-import icons from "@assets/icons";
+import icons from '@assets/icons';
 
 // noinspection JSUnusedGlobalSymbols
 export const prerender: boolean = true;
@@ -19,13 +19,39 @@ import BaseLayout from '@layouts/BaseLayout.astro';
           <span class="sr-only">RSS Feed</span>
         </a>
       </div>
-      <p class="text-lg text-justify">
-        Hi👋, I'm Hammad Majid but you can call me Bine. I become me when I combine my love for Theory. Chaos. Movies.
-        Programming. Supernovas. Music & Tea. </p>
+      <p class="text-justify">
+        My name is Hammad Majid and I'm a Computer Science student. I'm from Islamabad. I'm currently doing front-end web development as a freelancer.
+      </p>
+      <p class="text-justify">
+        On this website you can find information about me, projects I have worked on and blog posts I have written. I
+        write mostly about
+        stuff I find interesting so there is no specific theme. These topics might include: low level programming, web
+        technologies, physics, math
+        and tea recipes.
+      </p>
+      <div class="flex flex-row items-center justify-start gap-2">
+        <p>Social links: </p>
+        <a href="https://github.com/hammadmajid" target="_blank" rel="noopener noreferrer" class="fill-light-accent">
+          <Fragment set:html={icons.Github} />
+          <span class="sr-only">GitHub</span>
+        </a>
+        <a href="https://linkedin.com/in/hammadmajid" target="_blank" rel="noopener noreferrer" class="fill-light-accent">
+          <Fragment set:html={icons.LinkedIn} />
+          <span class="sr-only">LinkedIn</span>
+        </a>
+        <a href="https://instagram.com/hammadmajid_" target="_blank" rel="noopener noreferrer" class="fill-light-accent">
+          <Fragment set:html={icons.Instagram} />
+          <span class="sr-only">Instagram</span>
+        </a>
+        <a href="/contact" class="fill-light-accent">
+          <Fragment set:html={icons.Mail} />
+          <span class="sr-only">E-mail</span>
+        </a>
+      </div>
     </section>
     <section class="space-y-4">
       <h2 class="text-xl font-bold">Posts</h2>
-      <p>Not posts yet.</p>
+      <p class="text-center">Not posts yet.</p>
     </section>
   </main>
 </BaseLayout>
