@@ -1,5 +1,5 @@
 ---
-import Nav from '../components/Header.astro';
+import Nav from '@components/Header.astro';
 import Footer from '@components/Footer.astro';
 import SpeedInsights from '@vercel/speed-insights/astro';
 
@@ -22,14 +22,16 @@ const { title, description } = Astro.props as Props;
   <title>{title}</title>
   <meta name="description" content={description} />
 </head>
-<body class="bg-light-body text-light-text-primary flex flex-col h-screen">
-<header>
-  <Nav />
-</header>
-  <div class="grow">
-  <slot />
+<body class="bg-light-body text-light-text-primary h-screen grid place-items-center">
+<div class="max-w-screen-lg">
+  <header>
+    <Nav />
+  </header>
+  <div class="grow flex flex-col">
+    <slot />
+  </div>
+  <Footer />
 </div>
-<Footer />
 </body>
 </html>
 
