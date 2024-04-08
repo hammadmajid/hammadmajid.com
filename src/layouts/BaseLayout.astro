@@ -22,10 +22,8 @@ const { title, description } = Astro.props as Props;
   <meta name="description" content={description} />
 </head>
 <body class="bg-light-body text-light-text-primary h-screen grid place-items-center">
-<div class="max-w-screen-lg">
-  <header>
-    <Nav />
-  </header>
+<div class="max-w-screen-lg min-h-screen">
+  <Nav />
   <div class="grow flex flex-col">
     <slot />
   </div>
