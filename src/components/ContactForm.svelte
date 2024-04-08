@@ -24,22 +24,21 @@
 
   <label class="w-full" for="name">
     <input type="text" id="name" name="name" required placeholder="John Doe"
-           class="w-full p-2 rounded-sm outline outline-2 outline-slate-800"
+           class="w-full py-1 focus:outline-none border-b-2 border-b-light-text-primary"
     />
   </label>
   <label class="w-full" for="email">
     <input type="email" id="email" name="email" required placeholder="johndoe@example.com"
-           class="w-full p-2 rounded-sm outline outline-2 outline-slate-800"
+           class="w-full py-1 focus:outline-none border-b-2 border-b-light-text-primary"
     />
   </label>
   <label class="w-full" for="message">
     <textarea id="message" name="message" required placeholder="Hello, there!"
-              class="w-full p-2 rounded-sm outline outline-2 outline-slate-800"
+              class="w-full py-1 focus:outline-none border-b-2 border-b-light-text-primary"
     />
   </label>
   <button
-    class="w-full flex items-center justify-center gap-2 px-4 py-2 rounded-sm transition-colors flex-row bg-neutral-800 hover:bg-neutral-950 text-neutral-100 fill-neutral-100">
+    class="w-full flex items-center justify-center gap-2 px-4 py-2 rounded-sm transition-colors flex-row bg-light-text-primary hover:bg-light-text-secondary text-light-body fill-neutral-100">
     <span class="font-semibold">Send</span>
-    <i class="fa-regular fa-paper-plane" />
   </button>
 </form>
