@@ -28,9 +28,12 @@ const allProjects = await getCollection('projects');
             <a href={project.data.source} class="w-max hover:fill-light-accent">
               <Fragment set:html={icons.Github} />
             </a>
-            <a href={project.data.website} class="w-max hover:fill-light-accent">
-              <Fragment set:html={icons.Web} />
-            </a>
+            {
+              project.data.website &&
+              <a href={project.data.website} class="w-max hover:fill-light-accent">
+                <Fragment set:html={icons.Web} />
+              </a>
+            }
           </div>
         </div>
       ))}
