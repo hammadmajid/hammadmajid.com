@@ -1,5 +1,5 @@
 ---
-import Icon from 'astro-icon';
+import Icon from '@components/Icon.astro';
 
 export interface Props {
   text?: string;
@@ -48,5 +48,5 @@ const Tag: 'a' | 'button' = href ? 'a' : 'button';
 
 <Tag class={getButtonStyle(type, order)} href={href} id={id}>
   <span class="font-semibold">{text}</span>
-  <Icon name={icon} class="w-5 h-5" />
+  <Icon name={icon} classes="w-5 h-5" />
 </Tag>

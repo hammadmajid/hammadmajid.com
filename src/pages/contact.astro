@@ -1,0 +1,19 @@
+---
+// noinspection JSUnusedGlobalSymbols
+export const prerender: boolean = true;
+
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ContactForm from '../components/ContactForm.svelte';
+---
+
+<BaseLayout
+  title="Contact | Hammad Majid"
+  description="Contact Hammad Majid by filling out a form."
+>
+  <main class="grid place-items-center">
+    <div class="grid place-content-center py-12">
+      <h1 class="text-3xl font-bold">Contact</h1>
+    </div>
+    <ContactForm client:load />
+  </main>
+</BaseLayout>

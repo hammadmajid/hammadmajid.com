@@ -1,6 +1,6 @@
 ---
-import Nav from '~/components/Nav.astro';
-import Footer from '~/components/Footer.astro';
+import Header from '@components/Header.astro';
+import SpeedInsights from '@vercel/speed-insights/astro';
 
 export interface Props {
   title: string;
@@ -10,72 +10,25 @@ const { title, description } = Astro.props as Props;
 ---
 
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth font-Atkinson-Hyperlegible">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="/favicon.svg" rel="icon" />
-    <link rel="stylesheet" href="/base.css" />
-    <link rel="sitemap" href="/sitemap-index.xml" />
-    <title>{title}</title>
-    <meta name="description" content={description} />
-    <!-- TODO: add additional meta tags -->
-  </head>
-  <body class="bg-white text-neutral-800 flex flex-col h-screen">
-    <header>
-      <Nav />
-    </header>
-    <div class="grow" id="swup" class="transition-fade">
-      <slot />
-    </div>
-    <Footer />
-  </body>
+<html lang="en" class="scroll-smooth font-IBMPlexMono">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="/favicon.svg" rel="icon" />
+  <link rel="stylesheet" href="/base.css" />
+  <!--suppress HtmlUnknownTarget -->
+  <link rel="sitemap" href="/sitemap-index.xml" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+</head>
+<body class="bg-light-body text-light-text-primary h-screen">
+<div class="max-w-screen-lg h-screen mx-auto">
+  <Header />
+  <div class="grow flex flex-col">
+    <slot />
+  </div>
+</div>
+</body>
 </html>
 
-<script>
-  // @ts-nocheck
-  import Swup from 'swup';
-  import SwupA11yPlugin from '@swup/a11y-plugin';
-  import SwupPreloadPlugin from '@swup/preload-plugin';
-  import SwupProgressPlugin from '@swup/progress-plugin';
-
-  const swup = new Swup({
-    plugins: [
-      new SwupA11yPlugin(),
-      new SwupPreloadPlugin(),
-      new SwupProgressPlugin({
-        delay: 0,
-        hideImmediately: false,
-      }),
-    ],
-  });
-
-  if (window.location.hostname == 'hammadmajid.me') {
-    console.log(`
-
- .----------------.  .----------------.  .----------------.
-| .--------------. || .--------------. || .--------------. |
-| |       _      | || |        __    | || |      _       | |
-| |      / /     | || |       / /    | || |     \\ \\      | |
-| |     / /      | || |      / /     | || |      \\ \\     | |
-| |    < <       | || |     / /      | || |       > >    | |
-| |     \\ \\      | || |    / /       | || |      / /     | |
-| |      \\_\\     | || |   /_/        | || |     /_/      | |
-| |              | || |              | || |              | |
-| '--------------' || '--------------' || '--------------' |
- '----------------'  '----------------'  '----------------'
-
-    `);
-  }
-</script>
-
-<style>
-  .transition-fade {
-    transition: 1s;
-    opacity: 1;
-  }
-
-  html.is-animating .transition-fade {
-    opacity: 0;
-  }
-</style>
+<SpeedInsights />

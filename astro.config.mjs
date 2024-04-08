@@ -11,14 +11,17 @@ import svelte from '@astrojs/svelte';
 // https://astro.build/config
 import partytown from '@astrojs/partytown';
 
-// https://astro.build/config
-import netlify from "@astrojs/netlify/functions";
+import vercel from '@astrojs/vercel/serverless';
 
 // https://astro.build/config
 export default defineConfig({
   site: 'https://hammadmajid.me',
   integrations: [tailwind(), sitemap(), svelte(), partytown()],
   prefetch: true,
-  output: "server",
-  adapter: netlify()
+  output: 'server',
+  adapter: vercel({
+    webAnalytics: {
+      enabled: true,
+    }
+  }),
 });
