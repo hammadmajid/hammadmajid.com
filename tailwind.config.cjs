@@ -5,9 +5,16 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'Atkinson-Hyperlegible': ['Atkinson-Hyperlegible', ...defaultTheme.fontFamily.sans],
+        'IBMPlexMono': ['IBMPlexMono', ...defaultTheme.fontFamily.mono],
       }
     },
+    colors: {
+      'light-body': '#fbfefb',
+      'light-text-primary': '#282728',
+      'light-text-secondary': '#525152',
+      'light-text-tertiary': '#6f6f6f',
+      'light-accent': '#1678b3',
+    }
   },
   plugins: [],
 };
