@@ -11,7 +11,7 @@ const allProjects = await getCollection('projects');
     <h1 class="text-3xl font-bold">Projects</h1>
     <section class="grid md:grid-cols-2 place-items-center gap-4">
       {allProjects.map((project) => (
-        <div class="shadow-xl hover:shadow-2xl hover:tra transition-all rounded-md p-2">
+        <div class="shadow-xl space-y-2 hover:shadow-2xl hover:tra transition-all rounded-md p-4">
           <div class="flex flex-row items-center justify-between">
             <h2 class="font-semibold text-lg">{project.data.title}</h2>
             <p>{project.data.status}</p>
@@ -24,9 +24,14 @@ const allProjects = await getCollection('projects');
               </li>
             ))}
           </ul>
-          <a href={project.data.source} class="w-max hover:fill-light-accent">
-            <Fragment set:html={icons.Github} />
-          </a>
+          <div class="flex flex-row gap-1">
+            <a href={project.data.source} class="w-max hover:fill-light-accent">
+              <Fragment set:html={icons.Github} />
+            </a>
+            <a href={project.data.website} class="w-max hover:fill-light-accent">
+              <Fragment set:html={icons.Web} />
+            </a>
+          </div>
         </div>
       ))}
     </section>
