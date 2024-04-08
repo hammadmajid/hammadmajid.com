@@ -1,6 +1,5 @@
 ---
 import Nav from '@components/Header.astro';
-import Footer from '@components/Footer.astro';
 import SpeedInsights from '@vercel/speed-insights/astro';
 
 export interface Props {
@@ -30,7 +29,6 @@ const { title, description } = Astro.props as Props;
   <div class="grow flex flex-col">
     <slot />
   </div>
-  <Footer />
 </div>
 </body>
 </html>
