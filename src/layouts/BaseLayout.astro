@@ -1,5 +1,5 @@
 ---
-import Nav from '@components/Header.astro';
+import Header from '@components/Header.astro';
 import SpeedInsights from '@vercel/speed-insights/astro';
 
 export interface Props {
@@ -23,7 +23,7 @@ const { title, description } = Astro.props as Props;
 </head>
 <body class="bg-light-body text-light-text-primary h-screen grid place-items-center">
 <div class="max-w-screen-lg h-screen">
-  <Nav />
+  <Header />
   <div class="grow flex flex-col">
     <slot />
   </div>
