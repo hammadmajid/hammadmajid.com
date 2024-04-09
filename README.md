@@ -6,7 +6,7 @@ Welcome, this repository contains the souce code for [hammadmajid.me](https://ha
 
 The source code in this repository is licensed under the **MIT License**. You are free to copy, distribute, and modify it according to the terms specified in the `LICENSE` file located in the root directory of this repository.
 
-The content located at `src/content/*.md` is licensed under the **CC BY 4.0 DEED** license. This means you can freely copy, distribute, and modify the content, as long as you adhere to the conditions outlined in the license, which you can find [here](https://creativecommons.org/licenses/by/4.0/).
+The content located at `src/content/*.md` is licensed under the **CC NC-SA 4.0** license, granting you the freedom to share and adapt the material under certain conditions. You are permitted to copy, redistribute, and modify the content, provided that you appropriately attribute the source, refrain from using it for commercial purposes, and distribute any derivative works under the same license terms as the original material. More information can be found in the `src/content/LICENSE` file.
 
 ## Contributor Guidelines
 
