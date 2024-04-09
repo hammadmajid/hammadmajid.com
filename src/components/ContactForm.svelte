@@ -14,7 +14,7 @@
   }
 </script>
 
-<form on:submit={sendForm} class="w-2/3 md:w-1/2 lg:w-1/3 xl:w-1/4 flex flex-col items-center justify-center space-y-4"
+<form on:submit={sendForm} class="w-2/3 md:w-1/2 flex flex-col items-center justify-center space-y-4"
 >
   {#if responseStatus}
   <div class="w-full text-center">
