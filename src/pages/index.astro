@@ -1,35 +1,57 @@
 ---
-export const prerender = true;
+import icons from '@assets/icons';
 
-import BaseLayout from '~/layouts/BaseLayout.astro';
-import Button from '~/components/Button.astro';
+// noinspection JSUnusedGlobalSymbols
+export const prerender: boolean = true;
+
+import BaseLayout from '@layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="Hammad Majid" description="I'm Hammad Majid a front-end developer with a passion for writing web applications using technologies like Astro and Svelte. I also like to experiment with low-level programming languages such as assembly, constantly pushing the boundaries of what's possible with code. It's a challenging but rewarding pursuit that keeps me engaged and motivated.">
-  <main class="h-full grid items-center">
-    <div class="px-12 md:px-24 py-5">
-      <header class="space-y-1">
-        <h1 class="text-4xl font-semibold">Hammad Majid</h1>
-        <p>Front-end developer</p>
-      </header>
-      <div
-        class="flex flex-col space-y-2 md:flex-row md:space-y-0 md:space-x-2 items-start mt-6"
-      >
-        <Button
-          icon="fa-solid fa-arrow-right"
-          order="text-icon"
-          style="filled"
-          text="Get in touch"
-          href="/contact"
-        />
-        <Button
-          icon="fa-brands fa-github"
-          order="icon-text"
-          style="ghost-outlined"
-          text="github"
-          href="https://github.com/hammadmajid"
-        />
+<BaseLayout title="Hammad Majid"
+            description="I'm Hammad Majid but you can call me Bine. I become me when I combine my love for Theory. Chaos. Movies. Programming. Supernovas. Music & Tea.">
+  <main class="p-4 space-y-8">
+    <section class="space-y-4">
+      <div class="flex flex-row items-center gap-1">
+        <h1 class="text-2xl font-bold">Bine</h1>
+        <!--suppress HtmlUnknownTarget -->
+        <a href="/rss.xml">
+          <Fragment set:html={icons.rss} />
+          <span class="sr-only">RSS Feed</span>
+        </a>
       </div>
-    </div>
+      <p class="text-justify">
+        My name is Hammad Majid and I'm a Computer Science student. I'm from Islamabad. I'm currently doing front-end web development as a freelancer.
+      </p>
+      <p class="text-justify">
+        On this website you can find information about me, projects I have worked on and blog posts I have written. I
+        write mostly about
+        stuff I find interesting so there is no specific theme. These topics might include: low level programming, web
+        technologies, physics, math
+        and tea recipes.
+      </p>
+      <div class="flex flex-row items-center justify-start gap-2">
+        <p>Social links: </p>
+        <a href="https://github.com/hammadmajid" target="_blank" rel="noopener noreferrer" class="fill-light-accent">
+          <Fragment set:html={icons.Github} />
+          <span class="sr-only">GitHub</span>
+        </a>
+        <a href="https://linkedin.com/in/hammadmajid" target="_blank" rel="noopener noreferrer" class="fill-light-accent">
+          <Fragment set:html={icons.LinkedIn} />
+          <span class="sr-only">LinkedIn</span>
+        </a>
+        <a href="https://instagram.com/hammadmajid_" target="_blank" rel="noopener noreferrer" class="fill-light-accent">
+          <Fragment set:html={icons.Instagram} />
+          <span class="sr-only">Instagram</span>
+        </a>
+        <a href="/contact" class="fill-light-accent">
+          <Fragment set:html={icons.Mail} />
+          <span class="sr-only">E-mail</span>
+        </a>
+      </div>
+    </section>
+    <section class="space-y-4">
+      <h2 class="text-xl font-bold">Posts</h2>
+      <p class="text-center">Not posts yet.</p>
+    </section>
   </main>
 </BaseLayout>
