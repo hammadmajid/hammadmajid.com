@@ -14,6 +14,7 @@ module.exports = {
       'light-text-secondary': '#525152',
       'light-text-tertiary': '#6f6f6f',
       'light-accent': '#1678b3',
+      'light-accent-hover': '#0f5f8b',
     }
   },
   plugins: [],

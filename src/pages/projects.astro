@@ -20,7 +20,7 @@ const allProjects = await getCollection('projects');
           <ul>
             {project.data.tags.map((tag) => (
               <li>
-                <a href={`/projects/?${tag}`} class="text-light-accent">{tag}</a>
+                <a href={`/projects/?${tag}`} class="text-light-accent hover:text-light-accent-hover">{tag}</a>
               </li>
             ))}
           </ul>

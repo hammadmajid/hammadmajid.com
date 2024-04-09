@@ -14,7 +14,7 @@ import BaseLayout from '@layouts/BaseLayout.astro';
       <div class="flex flex-row items-center gap-1">
         <h1 class="text-2xl font-bold">Bine</h1>
         <!--suppress HtmlUnknownTarget -->
-        <a href="/rss.xml">
+        <a href="/rss.xml" class="fill-light-accent hover:fill-light-accent-hover">
           <Fragment set:html={icons.rss} />
           <span class="sr-only">RSS Feed</span>
         </a>
@@ -31,19 +31,19 @@ import BaseLayout from '@layouts/BaseLayout.astro';
       </p>
       <div class="flex flex-row items-center justify-start gap-2">
         <p>Social links: </p>
-        <a href="https://github.com/hammadmajid" target="_blank" rel="noopener noreferrer" class="fill-light-accent">
+        <a href="https://github.com/hammadmajid" target="_blank" rel="noopener noreferrer" class="fill-light-accent hover:fill-light-accent-hover">
           <Fragment set:html={icons.Github} />
           <span class="sr-only">GitHub</span>
         </a>
-        <a href="https://linkedin.com/in/hammadmajid" target="_blank" rel="noopener noreferrer" class="fill-light-accent">
+        <a href="https://linkedin.com/in/hammadmajid" target="_blank" rel="noopener noreferrer" class="fill-light-accent hover:fill-light-accent-hover">
           <Fragment set:html={icons.LinkedIn} />
           <span class="sr-only">LinkedIn</span>
         </a>
-        <a href="https://instagram.com/hammadmajid_" target="_blank" rel="noopener noreferrer" class="fill-light-accent">
+        <a href="https://instagram.com/hammadmajid_" target="_blank" rel="noopener noreferrer" class="fill-light-accent hover:fill-light-accent-hover">
           <Fragment set:html={icons.Instagram} />
           <span class="sr-only">Instagram</span>
         </a>
-        <a href="/contact" class="fill-light-accent">
+        <a href="/contact" class="fill-light-accent hover:fill-light-accent-hover">
           <Fragment set:html={icons.Mail} />
           <span class="sr-only">E-mail</span>
         </a>
