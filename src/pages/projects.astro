@@ -7,7 +7,7 @@ const allProjects = await getCollection('projects');
 ---
 
 <BaseLayout title="Projects" description="List of all the project I have worked on so far.">
-  <main class="p-8 space-y-4">
+  <main id="main-content" class="p-8 space-y-4">
     <h1 class="text-3xl font-bold">Projects</h1>
     <section class="grid md:grid-cols-2 place-items-center gap-4">
       {allProjects.map((project) => (
