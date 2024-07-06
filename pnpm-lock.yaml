@@ -12,7 +12,7 @@ importers:
         specifier: ^2.1.0
         version: 2.1.1
       '@astrojs/sitemap':
-        specifier: ^3.1.2
+        specifier: ^3.1.6
         version: 3.1.6
       '@astrojs/svelte':
         specifier: ^5.4.0
