@@ -2,18 +2,30 @@
 // noinspection JSUnusedGlobalSymbols
 export const prerender: boolean = true;
 
-import BaseLayout from '../layouts/BaseLayout.astro';
-import ContactForm from '../components/ContactForm.svelte';
+import icons from '@assets/icons';
+import BaseLayout from '@layouts/BaseLayout.astro';
 ---
 
 <BaseLayout
-  title="Contact | Hammad Majid"
-  description="Contact Hammad Majid by filling out a form."
+    title="Contact | Hammad Majid"
+    description="Contact Hammad Majid by sending an email."
 >
-  <main id="main-content" class="grid place-items-center">
-    <div class="grid place-content-center py-12">
-      <h1 class="text-3xl font-bold">Contact</h1>
-    </div>
-    <ContactForm client:load />
-  </main>
+    <main id="main-content" class="p-4 space-y-2">
+        <h1 class="text-3xl font-bold">Contact</h1>
+        <p>
+            You can send me an email at <a
+                class="text-light-accent hover:text-light-accent-hover"
+                href="mailto:hammadmajid@proton.me"
+            >
+                hammadmajid@proton.me</a
+            >. Please allow a few days for a response. Optionally you can find
+            my PGP key on <a
+                href="https://keys.openpgp.org/vks/v1/by-fingerprint/A40C364D8F90407DE3F057F05C22E7B2459D1E5E"
+                class="text-light-accent hover:text-light-accent-hover"
+                >keys.openpgp.org</a
+            >.
+        </p>
+    </main>
 </BaseLayout>
+
+Sea
