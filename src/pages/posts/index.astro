@@ -1,0 +1,30 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const posts = await getCollection('posts');
+---
+
+<BaseLayout
+    title="Posts | Hammad Majid"
+    description="A collection of thoughts, ideas, and musings by Hammad Majid."
+>
+    <main id="main-content" class="p-4">
+        <h1 class="text-4xl font-bold mb-8">Posts</h1>
+        <ul>
+            {
+                posts.map((post) => (
+                    <li class="mb-4">
+                        <a
+                            href={'/posts/' + post.slug}
+                            class="text-light-accent"
+                        >
+                            {post.data.title}
+                        </a>
+                        <p class="text-gray-500">{post.data.date}</p>
+                    </li>
+                ))
+            }
+        </ul>
+    </main>
+</BaseLayout>
