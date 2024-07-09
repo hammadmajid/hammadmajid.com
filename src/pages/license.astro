@@ -1,0 +1,28 @@
+---
+export const prerender: boolean = true;
+
+import BaseLayout from '@layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+    title="License | Hammad Majid"
+    description="Learn about the license of this website."
+>
+    <main id="main-content" class="p-4 space-y-8">
+        <section class="space-y-4">
+            <p>
+                All content on this website is copyright free. That means that
+                everything is under the public domain and you can use and reuse
+                the content or code of this website however you would like.
+            </p>
+            <p>Attribution is appreciated, but not required.</p>
+            <p>
+                You can find the full &ldquo;license&rdquo; on the <a
+                    class="text-light-accent hover:text-light-accent-hover"
+                    href="https://github.com/hammadmajid/hammadmajid.me/blob/master/LICENSE"
+                    rel="noopener">GitHub repo for this project</a
+                >.
+            </p>
+        </section>
+    </main>
+</BaseLayout>
