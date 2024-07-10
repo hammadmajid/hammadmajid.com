@@ -1,11 +1,27 @@
-<footer class="grid place-content-center text-center space-y-3 py-12">
-    <p>
-        <a
-            href="/license"
-            class="text-light-accent hover:text-light-accent-hover"
-            >Unlicensed</a
-        > by Hammad Majid {new Date().getFullYear()}
-    </p>
+---
+import { Image } from 'astro:assets';
+import humanMadeMarkImage from '../../public/images/humanmade-mark.png';
+---
+
+<footer
+    class="grid place-content-center text-center space-y-3 mt-12 py-12 px-4 border-t-2 border-light-text-secondary"
+>
+    <div class="flex flex-col justify-center items-center gap-4">
+        <a href="https://humanmademark.com/" class="grid w-full md:w-1/2">
+            <Image
+                class="w-[50%] place-self-center"
+                src={humanMadeMarkImage}
+                alt="Humanmade Mark Logo indicating that content on this site is made by a real Human being not AI"
+            />
+        </a>
+        <p>
+            <a
+                href="/license"
+                class="text-light-accent hover:text-light-accent-hover"
+                >Unlicensed</a
+            > by Hammad Majid {new Date().getFullYear()}
+        </p>
+    </div>
     <p class="text-sm">
         Built with <a
             href="https://astro.build"
