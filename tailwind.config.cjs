@@ -15,6 +15,7 @@ module.exports = {
       'light-text-tertiary': '#6f6f6f',
       'light-accent': '#1678b3',
       'light-accent-hover': '#0f5f8b',
+      'light-border': '#d4d4d4',
     },
   },
   plugins: [require('@tailwindcss/typography')],
