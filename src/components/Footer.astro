@@ -4,7 +4,7 @@ import humanMadeMarkImage from '../../public/images/humanmade-mark.png';
 ---
 
 <footer
-    class="grid place-content-center text-center space-y-3 mt-12 py-12 px-4 border-t-2 border-light-text-secondary"
+    class="grid place-content-center text-center space-y-3 mt-12 py-12 px-4 border-t-2 border-light-border"
 >
     <div class="flex flex-col justify-center items-center gap-4">
         <a href="https://humanmademark.com/" class="grid w-full md:w-1/2">
@@ -14,15 +14,15 @@ import humanMadeMarkImage from '../../public/images/humanmade-mark.png';
                 alt="Humanmade Mark Logo indicating that content on this site is made by a real Human being not AI"
             />
         </a>
-        <p>
+        <p class="text-light-text-secondary">
             <a
-                href="/license"
+                href="/meta#license"
                 class="text-light-accent hover:text-light-accent-hover"
                 >Unlicensed</a
             > by Hammad Majid {new Date().getFullYear()}
         </p>
     </div>
-    <p class="text-sm">
+    <p class="text-sm text-light-text-tertiary">
         Built with <a
             href="https://astro.build"
             class="text-light-accent hover:text-light-accent-hover">Astro</a
@@ -30,6 +30,9 @@ import humanMadeMarkImage from '../../public/images/humanmade-mark.png';
             href="https://tailwindcss.com"
             class="text-light-accent hover:text-light-accent-hover"
             >Tailwind CSS</a
+        >, hosted on <a
+            href="https://vercel.com"
+            class="text-light-accent hover:text-light-accent-hover">Vercel</a
         >. View the source code on <a
             href="https://github.com/hammadmajid/hammadmajid.me"
             class="text-light-accent hover:text-light-accent-hover">GitHub</a
