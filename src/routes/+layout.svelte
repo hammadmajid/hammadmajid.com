@@ -14,10 +14,8 @@
 <div class="w-screen bg-zinc-50 text-zinc-800 dark:bg-zinc-800 dark:text-zinc-100">
 	<div class="max-w-screen-md min-h-screen mx-auto flex flex-col justify-between">
 		<div>
-			<header
-				class="flex flex-col sm:flex-row justify-between items-center p-4 border-b-2 border-zinc-500"
-			>
-				<div class="w-full flex flex-col justify-between items-center">
+			<header class="p-4 border-b-2 border-zinc-500">
+				<div class="w-full flex flex-col md:flex-row justify-between items-center">
 					<div class="w-full flex flex-row justify-between">
 						<a href="/" class="text-nowrap block font-medium text-xl">Hammad Majid</a>
 
@@ -33,7 +31,7 @@
 						</button>
 					</div>
 					<nav>
-						<ul id="nav-menu" class="hidden mt-4 md:flex flex-col md:flex-row gap-4">
+						<ul id="nav-menu" class="hidden mt-4 md:mt-0 md:flex flex-col md:flex-row gap-4">
 							{#each links as link}
 								<Link href={link.toLowerCase()}>{link}</Link>
 							{/each}
