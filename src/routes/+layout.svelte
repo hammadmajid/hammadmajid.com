@@ -7,11 +7,42 @@
 	}
 
 	let { children }: Props = $props();
+
+	const links = ['Projects', 'Uses', 'Contact', 'About'];
 </script>
 
-<div class="max-w-screen-md mx-auto h-screen flex flex-col justify-between">
-	<!--> TODO: add nav here <-->
-	{@render children()}
+<div class="w-screen bg-zinc-50 text-zinc-800 dark:bg-zinc-800 dark:text-zinc-100">
+	<div class="max-w-screen-md min-h-screen mx-auto flex flex-col justify-between">
+		<div>
+			<header
+				class="flex flex-col sm:flex-row justify-between items-center p-4 border-b-2 border-zinc-500"
+			>
+				<div class="w-full flex flex-col justify-between items-center">
+					<div class="w-full flex flex-row justify-between">
+						<a href="/" class="text-nowrap block font-medium text-xl">Hammad Majid</a>
+
+						<button
+							class="md:hidden"
+							onclick={() => {
+								let menu = document.getElementById('nav-menu')!;
+								menu.classList.toggle('hidden');
+								menu.classList.toggle('flex');
+							}}
+						>
+							<i class="fa-solid fa-bars"></i>
+						</button>
+					</div>
+					<nav>
+						<ul id="nav-menu" class="hidden mt-4 md:flex flex-col md:flex-row gap-4">
+							{#each links as link}
+								<Link href={link.toLowerCase()}>{link}</Link>
+							{/each}
+						</ul>
+					</nav>
+				</div>
+			</header>
+			{@render children()}
+		</div>
 
 		<footer class="pb-16 p-4 border-t-2 border-zinc-500 text-center space-y-2">
 			<p>
@@ -27,4 +58,5 @@
 				</span>
 			</p>
 		</footer>
+	</div>
 </div>
