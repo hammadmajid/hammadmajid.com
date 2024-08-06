@@ -1,0 +1,39 @@
+---
+import Header from '@components/Header.astro';
+import Footer from '@components/Footer.astro';
+import SpeedInsights from '@vercel/speed-insights/astro';
+import { ViewTransitions } from 'astro:transitions';
+
+export interface Props {
+    title: string;
+    description: string;
+}
+const { title, description } = Astro.props as Props;
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth font-IBMPlexMono">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="/favicon.svg" rel="icon" />
+        <link rel="stylesheet" href="/base.css" />
+        <!--suppress HtmlUnknownTarget -->
+        <link rel="sitemap" href="/sitemap-index.xml" />
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <ViewTransitions />
+    </head>
+    <body class="bg-light-body text-light-text-primary h-screen">
+        <div
+            class="max-w-screen-md h-screen mx-auto flex flex-col justify-between"
+        >
+            <Header />
+            <div class="grow flex flex-col">
+                <slot />
+            </div>
+            <Footer />
+        </div>
+        <SpeedInsights />
+    </body>
+</html>

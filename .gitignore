@@ -1,8 +1,7 @@
-# output
-.output
-.vercel
-.svelte-kit
-build/
+# build output
+dist/
+# generated types
+.astro/
 
 # dependencies
 node_modules/

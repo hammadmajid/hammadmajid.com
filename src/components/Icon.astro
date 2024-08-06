@@ -1,0 +1,10 @@
+---
+export interface Props {
+  name: string;
+  classes: string;
+}
+
+const { name, classes } = Astro.props as Props;
+---
+
+<i class={name + ' ' + classes} />
